@@ -1,0 +1,37 @@
+html {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background: rgba(0, 0, 255, .3);
+	text-align: center;
+	color: white;
+}
+
+#image {
+		display: block;
+	margin-left: auto;
+	margin-right: auto;
+  max-width: 100%;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: white;
+}
+
+#img-caption {
+	padding: 10px;
+	font-style: italic;
+}
+
+#tribute-info {
+  max-width: 550px;
+  margin: auto;
+  text-align: left;
+  line-height: 1.6;
+}
+
+
+
+
+

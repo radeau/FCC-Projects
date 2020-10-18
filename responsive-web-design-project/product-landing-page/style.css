@@ -1,0 +1,91 @@
+/**
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+**/
+
+header #nav-bar{
+    background-color: #ffffff !important;
+    line-height: 50px;
+    font-size: 22px;
+    padding-right: 80px;
+}
+
+.navbar .navbar-brand{
+    font-size: 24px;
+    line-height: 1.8;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding-left: 80px;
+    color: rgb(63, 62, 62);
+} 
+
+#home{
+  padding-top: 25px;
+}
+
+.btn-outline-primary {
+    border-color: #421010;
+    color: #421010;
+    background-color: #ffffff;
+}
+
+.btn-outline-primary:hover{
+    background-color: #421010;
+    box-shadow: 0px 0px 15px 2px rgba(66,16,16,1);
+    border-color: #421010;
+}
+
+#aboutUs  {
+    position: relative;
+    background-color: black;
+    height: 75vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #aboutUs video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  #aboutUs  .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  #aboutUs .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+  }
+
+  footer{
+    background-color: #383B38;
+  }
+      

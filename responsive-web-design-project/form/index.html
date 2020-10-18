@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Rads Open Kitchen Survey</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div class = "padding">
+			<h1 id="title">Rads Open Kitchen Survey Form</h1>
+			<p id="description">Please let us know how was the food and service.</p>
+		</div>
+		 
+	    <div id="container">
+	    	<form id="survey-form">
+				<div class="date">
+				  	<label for="survey-date">Day Visited:</label>
+				  	<input type="date" id="survey-date" name="survey" value="2020-07-04">
+				</div>
+	            
+	            <fieldset class="inOut">
+	            	<legend>Dine In / Take Out:</legend>
+	            		<div>
+	            			<input type="radio" id="dine-in" name="dine-take" value="dine-in" checked="">
+							<label for="dine-in">Dine In</label>
+						</div>
+						<div>
+						 	<input type="radio" id="take-out" name="dine-take" value="take-out">
+							<label for="take-out">Take Out</label>   	
+						</div>	
+				</fieldset>
+
+				<div id="radiobtn">
+					<fieldset>
+						<legend>Food Quality:</legend>
+						    <div>
+								 <input type="radio" id="excellent" name="food-quality" value="excellent" checked="">
+								 <label for="excellent">Excellent</label>
+						    </div>
+						    <div>
+							  	 <input type="radio" id="good" name="food-quality" value="good">
+								 <label for="good">Good</label>
+						    </div>
+						    <div>
+							  	 <input type="radio" id="average" name="food-quality" value="average">
+								 <label for="average">Average</label>
+						    </div>
+						    <div>
+							  	 <input type="radio" id="dissatisfied" name="food-quality" value="dissatisfied">
+								 <label for="dissatisfied">Dissatisfied</label>
+						    </div>
+					</fieldset>
+					<fieldset>
+						<legend>Service</legend>
+							<div>
+								 <input type="radio" id="s-excellent" name="service" value="excellent" checked="">
+								 <label for="s-excellent">Excellent</label>
+						    </div>
+						    <div>
+							  	 <input type="radio" id="s-good" name="service" value="good">
+								 <label for="s-good">Good</label>
+						    </div>
+						    <div>
+							  	 <input type="radio" id="s-average" name="service" value="average">
+								 <label for="s-average">Average</label>
+						    </div>
+						    <div>
+							  	 <input type="radio" id="s-dissatisfied" name="service" value="dissatisfied">
+								 <label for="s-dissatisfied">Dissatisfied</label>
+						    </div>
+						
+					</fieldset>
+					<fieldset>
+						<legend>Overall Experience:</legend>
+						    <div>
+								 <input type="radio" id="o-excellent" name="overall" value="excellent" checked="">
+								 <label for="o-excellent">Excellent</label>
+						    </div>
+						    <div>
+							  	 <input type="radio" id="o-good" name="overall" value="good">
+								 <label for="o-good">Good</label>
+						    </div>
+						    <div>
+							  	 <input type="radio" id="o-average" name="overall" value="average">
+								 <label for="o-average">Average</label>
+						    </div>
+						    <div>
+							  	 <input type="radio" id="o-dissatisfied" name="overall" value="dissatisfied">
+								 <label for="o-dissatisfied">Dissatisfied</label>
+						    </div>
+					</fieldset>
+	            </div>
+				
+				<div class="improved">
+					<p>What would you like to see improved? (Check all that apply)</p>
+						<div>
+							<input type="checkbox" id="food" value="food">
+							<label for="food">Food</label>
+						</div>
+						<div>
+							<input type="checkbox" id="service" value="service">
+							<label for="service">Service</label>
+						</div>
+						<div>
+							<input type="checkbox" id="ambience" value="ambience">
+							<label for="ambience">Ambience</label>
+						</div>
+						<div>
+							<input type="checkbox" id="additional-menu" value="additional-menu">
+							<label for="additional-menu">Additional Menu</label>
+						</div>
+				</div>
+
+				<div class="commentForm">
+					<label for="comment-form">Any comments, questions or suggestions?</label>
+					<div id="commentFormPadding">
+						<textarea id="comment-form" rows="10" cols="64"></textarea>
+					</div>
+				</div>
+
+				<div class="dDown">
+					<label for="dropdown">Which best option best describes your current role?</label>
+					<select id="dropdown">
+						<option>Student</option>
+						<option selected>Employed</option>
+						<option>Prefer not to say</option>
+						<option>Other</option>
+					</select>
+				</div>
+
+				<div class="nameEmailAge">
+					<label for="name" id="name-label">Name:</label>
+					<input type="text" id="name" name="name" required placeholder="Enter your name">
+				</div>
+				<div class="nameEmailAge">
+					<label for="email" id="email-label">Email:</label>
+					<input type="email" id="email" name="emailAddress" required placeholder="Enter your email address">
+				</div>
+
+				<div class="nameEmailAge">
+					<label for="number" id="number-label">Age:</label>
+					<input type="number" id="number" name="age" min="10" max="100" placeholder="18">
+				</div>
+
+				<div id="submitButton">
+					<input type="submit" id="submit" value="Submit">
+				</div>
+			</form>	
+	    </div>
+	</body>
+</html>
