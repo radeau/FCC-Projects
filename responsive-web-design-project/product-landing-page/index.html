@@ -11,7 +11,8 @@
 <body>
 	<header id="header">
 		<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top" id="nav-bar">
-			<a class="navbar-brand">The Coffee</a>
+			<a class="navbar-brand"><img src="" id="header-img">The Coffee</a><!--no img logo | only typography-->
+			 
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarList" aria-controls="navbarList" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -32,34 +33,31 @@
 			</div>
 
 			<div class="col-12 col-md-6 d-flex flex-column justify-content-center">
-				<h1>A rare experience in taste</h1>
-				<p class="pr-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				<h1 class="row">A rare experience in taste</h1>
+				<p class="row pr-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+				<div class="row">
+					<button class="btn btn-outline-primary mt-1">Learn More</button> 
+				</div>
 			</div>
 		</div>
 	</section>
 
 	<section id="aboutUs">
-
-
-			<div class="overlay"></div>
-			<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-			  <source src="img/Pexels Videos 2675515.mp4" type="video/mp4">
-			</video>
-			<div class="container h-100">
-			  <div class="d-flex h-100 text-center align-items-center">
-				<div class="w-100 text-white">
-				  <h1 class="display-3">“We pride ourselves in producing premium quality coffee beans.”</h1>
-				  <p class="lead mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident asperiores iusto dolorum fuga ad minima suscipit, accusamus quaerat possimus repellendus.</p>
-				  <button class="btn btn-outline-primary mt-3">Learn More</button> 
-				</div>
+		<div class="overlay"></div>
+		<video id="video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+			<source src="img/Pexels Videos 2675515.mp4" type="video/mp4">
+		</video>
+		<div class="container h-100">
+			<div class="d-flex h-100 text-center align-items-center">
+			  <div class="w-100 text-white">
+				<h1 class="display-3">“We pride ourselves in producing premium quality coffee beans.”</h1>
+				<p class="lead mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident asperiores iusto dolorum fuga ad minima suscipit, accusamus quaerat possimus repellendus.</p>
+				<button class="btn btn-outline-primary mt-3">Learn More</button> 
 			  </div>
 			</div>
-
-
-
-		
+		  </div>
 	</section>
 
 	<section id="pricing">
@@ -71,9 +69,17 @@
 				</div>
 				<div class="col-12 col-md-4">
 					<img src="img/Ellipse 3.png" alt="ground" class="img-responsive p-5" width="100%">
-				</div>
+					<h3 class="font-weight-bold d-flex justify-content-center">$49.99<span class="ml-2 badge badge-pill badge-danger px-2">Hot!!!</span></h3>
+					<div class="d-flex justify-content-center">
+						<button class="btn btn-outline-primary mt-1 buyBtn">Buy Now</button> 
+					</div>
+ 				</div>
 				<div class="col-12 col-md-4">
 					<img src="img/Ellipse 2.png" alt="pellet" class="img-responsive p-5" width="100%">
+					<h3 class="font-weight-bold d-flex justify-content-center ">$69.99<span class="ml-2 badge badge-pill badge-warning px-2">New!</span></h3>
+					<div class="d-flex justify-content-center">
+						<button class="btn btn-outline-primary mt-1 buyBtn">Buy Now</button> 
+					</div> 				
 				</div>
 			</div>
 		</div>
@@ -81,13 +87,13 @@
 
 	<section>
 		<div class="jumbotron text-center m-0">
-				<h1>Hurry up! Subscribe to our newsletter and get 25% Off!</h1>
-				<form action="https://www.freecodecamp.com/email-submit">
-					<div class="form-group row justify-content-center">
-						<input name="email" type="email" class="form-control col-sm-4" id="email" aria-describedby="email" placeholder="Enter your email address">
-						<button class="btn btn-outline-primary" type="submit" value="Submit">Submit</button>
-					</div>
-				</form>
+			<h1>Hurry up! Subscribe to our newsletter and get 25% Off!</h1>
+			<form id="form" action="https://www.freecodecamp.com/email-submit">
+				<div class="form-group row justify-content-center">
+					<input name="email" type="email" class="form-control col-sm-4" id="email" aria-describedby="email" placeholder="Enter your email address">
+					<input id="submit" class="btn btn-outline-primary" type="submit" value="Submit"></input>
+				</div>
+			</form>
 		</div>
 	</section>
 
@@ -102,7 +108,6 @@
 				<div><small class="text-white">Copyright 2020, The Coffee</small></div>
 			</div>
 		</div>
-
 	</footer>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

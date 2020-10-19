@@ -45,6 +45,11 @@ header #nav-bar{
     border-color: #421010;
 }
 
+.buyBtn{
+  background-color: #421010;
+  color: #ffffff;
+}
+
 #aboutUs  {
     position: relative;
     background-color: black;
@@ -85,7 +90,12 @@ header #nav-bar{
     z-index: 1;
   }
 
-  footer{
+  #footer{
     background-color: #383B38;
+    height: 100px;
+  }
+
+  footer .container{
+    padding-top: 25px;
   }
       
