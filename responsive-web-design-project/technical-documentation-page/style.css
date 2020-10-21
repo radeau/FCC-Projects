@@ -1,0 +1,123 @@
+html,
+body{
+}
+
+#navbar{
+    position: fixed;
+    width: 210px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #111;
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+#main-doc{
+    margin-left: 25%;
+}
+
+code{
+  font-family: Consolas,"courier new";
+  color: crimson;
+  background-color: #f1f1f1;
+  padding: 2px;
+  font-size: 105%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+<main id="doc">
+        <section class="main-section" id="title_describes_the_topic_of_that_section1">
+            <header>text that describes the topic of that section.</header>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <code></code>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        <section class="main-section" id="title_describes_the_topic_of_that_section2">
+            <header>text that describes the topic of that section.</header>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <code></code>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </section>
+        <section class="main-section" id="title_describes_the_topic_of_that_section3">
+            <header>text that describes the topic of that section.</header>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <code></code>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </section>
+        <section class="main-section" id="title_describes_the_topic_of_that_section4">
+            <header>text that describes the topic of that section.</header>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <code></code>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </section>
+        <section class="main-section" id="title_describes_the_topic_of_that_section5">
+            <header>text that describes the topic of that section.</header>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <code></code>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </section>
+    </main>*/
