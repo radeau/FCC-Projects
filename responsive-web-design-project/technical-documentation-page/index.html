@@ -260,9 +260,65 @@
 
         </section>
         <section class="main-section" id="tables">
-            <header>Tables</header>
-            <p></p>
+            <header><h1>Tables</h1></header>
+            <p>Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with Bootstrap.</p>
             <h3>Examples</h3>
+            <p>Due to the widespread use of tables across third-party widgets like calendars and date pickers, we’ve designed our tables to be opt-in. Just add the base class <code>.table</code> to any <code>&lttable&gt</code>, then extend with custom styles or our various included modifier classes.</p>
+            <p>Using the most basic table markup, here’s how <code>.table</code>-based tables look in Bootstrap. All table styles are inherited in Bootstrap 4, meaning any nested tables will be styled in the same manner as the parent.</p>
+            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
+            <p>You can also invert the colors—with light text on dark backgrounds—with <code>.table-dark</code>.</p>
+            <h3>Table head options</h3>
+            <p>Similar to tables and dark tables, use the modifier classes <code>.thead-light</code> or <code>.thead-dark</code> to make <code>&ltthead&gt</code>s appear light or dark gray.</p>
+            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
+            <h3>Striped rows</h3>
+            <p>Use <code>.table-striped</code> to add zebra-striping to any table row within the <code>&ltbody&gt</code>.</p>
+            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
+            <h3>Bordered table</h3>
+            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
+
+            <h3>Borderless table</h3>
+            <p>Add <code>.table-borderless</code> for a table without borders.</p>
+            <p><code>.table-borderless</code> can also be used on dark tables.</p>
+            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
+
+
+            <h3>Hoverable rows</h3>
+            <p>Add <code>.table-hover</code> to enable a hover state on table rows within a <code>&ltbody&gt</code>.</p>
+            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
+           
+            <h3>Small table</h3>
+            <p>Add <code>.table-sm</code> to make tables more compact by cutting cell padding in half.</p>
+            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
+
+            <h3>Contextual classes</h3>
+            <p>Use contextual classes to color table rows or individual cells.</p>
+            <p>Regular table background variants are not available with the dark table, however, you may use text or background utilities to achieve similar styles.</p>
+            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
+            
+            <h4>Conveying meaning to assistive technologies</h4>
+            <p>Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (e.g. the visible text), or is included through alternative means, such as additional text hidden with the <code>.sr-only</code> class.</p>
+            <p>Create responsive tables by wrapping any <code>.table</code> with <code>.table-responsive{-sm|-md|-lg|-xl}</code>, making the table scroll horizontally at each max-width breakpoint of up to (but not including) 576px, 768px, 992px, and 1120px, respectively.</p>
+            <p>Note that since browsers do not currently support range context queries, we work around the limitations of min- and max- prefixes and viewports with fractional widths (which can occur under certain conditions on high-dpi devices, for instance) by using values with higher precision for these comparisons.</p>
+            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
+            
+            <h3>Captions</h3>
+            <p>A <code>&ltcaption&gt</code> functions like a heading for a table. It helps users with screen readers to find a table and understand what it’s about and decide if they want to read it.</p>
+            
+            <h3>Responsive tables</h3>
+            <p>Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by wrapping a .table with .table-responsive. Or, pick a maximum breakpoint with which to have a responsive table up to by using <code>.table-responsive{-sm|-md|-lg|-xl}</code>.</p>
+            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
+
+            <h4>Vertical clipping/truncation</h4>
+            <p>Responsive tables make use of <code>overflow-y: hidden</code>, which clips off any content that goes beyond the bottom or top edges of the table. In particular, this can clip off dropdown menus and other third-party widgets.</p>
+            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
+            
+            <h3>Always responsive</h3>
+            <p>Across every breakpoint, use <code>.table-responsive</code> for horizontally scrolling tables.</p>
+            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
+
+            <h3>Breakpoint specific</h3>
+            <p>Use <code>.table-responsive{-sm|-md|-lg|-xl}</code> as needed to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.</p>
+            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
         </section>
         <section class="main-section" id="figures">
             <header><h1>Figures</h1></header>
