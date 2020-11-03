@@ -8,7 +8,7 @@ body{
 
 #navbar{
     position: fixed;
-    width: 210px;
+    width: 250px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -17,8 +17,27 @@ body{
     top: 0px;
 }
 
+nav header{
+    font-size: 1.5em;
+    text-align: center;
+    margin: 20px;
+    font-weight:thin;
+}
+
 a {
     text-decoration: none;
+    margin: 15px 10px 15px 10px;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+a:hover {
+    color: #ffffff;
+    font-size: 1.5em;
+    text-align: center;
+    border: 1px solid #ffffff;
+    border-radius: 2px;
+    margin: 0 10px 0 10px;
 }
 
 #main-doc{
@@ -40,6 +59,12 @@ code.value{
     color: blue
 }
 
+header h1{
+    font-weight:thin;
+    font-size: 1.6em;
+    color: #7952b3;
+    margin: 0.5em 0em;
+}
 
 
 
