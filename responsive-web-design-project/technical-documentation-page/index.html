@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Page</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet"> 
-    <title>Technical Documentation Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav id="navbar">
-        <header>Bootstrap Content</header>
+    <nav id="navbar" class="dropdown">
+        <button class="drpbtn">
+        </button>
+        <header class="dropdown-content">Bootstrap Content</header>
         <a href="#reboot" class="nav-link">Reboot</a>
         <a href="#typography" class="nav-link">Typography</a>
         <a href="#code" class="nav-link">Code</a>
@@ -41,27 +44,7 @@
                 </ul>
             <h3>Native font stack</h3>
             <p>The default web fonts (Helvetica Neue, Helvetica, and Arial) have been dropped in Bootstrap 4 and replaced with a “native font stack” for optimum text rendering on every device and OS. Read more about native font stacks in this Smashing Magazine article.</p>
-            <pre>
-                <code>
-                $font-family-sans-serif:
-                // Safari for macOS and iOS (San Francisco)
-                -apple-system,
-                // Chrome < 56 for macOS (San Francisco)
-                BlinkMacSystemFont,
-                // Windows
-                "Segoe UI",
-                // Android
-                Roboto,
-                // Basic web fallback
-                "Helvetica Neue", Arial,
-                // Linux
-                "Noto Sans",
-                // Sans serif fallback
-                sans-serif,
-                // Emoji fonts
-                "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-                </code>
-            </pre>
+            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/reboot/">getbootstrap.com</a></p>
             <p>This <code>font-family</code> is applied to the <code>&ltbody&gt</code> and automatically inherited globally throughout Bootstrap. To switch the global <code>font-family</code>, update <code>$font-family-base</code> and recompile Bootstrap.</p>
             <h3>Headings and paragraphs</h3>
             <p>All heading elements—e.g., <code>&lth1&gt</code>—and <code>&ltp&gt</code> are reset to have their <code>margin-top</code> removed. Headings have <code>margin-bottom: .5rem</code> added and paragraphs <code>margin-bottom: 1rem</code> for easy spacing.</p>
@@ -333,5 +316,7 @@
         </section> 
     </main>
     
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
 </body>
 </html>

@@ -24,20 +24,19 @@ nav header{
     font-weight:thin;
 }
 
-a {
+.nav-link {
     text-decoration: none;
     margin: 15px 10px 15px 10px;
     font-size: 1.3em;
     text-align: center;
 }
 
-a:hover {
+.nav-link:hover {
     color: #ffffff;
     font-size: 1.5em;
     text-align: center;
     border: 1px solid #ffffff;
     border-radius: 2px;
-    margin: 0 10px 0 10px;
 }
 
 #main-doc{
@@ -67,94 +66,49 @@ header h1{
 }
 
 
+@media only screen and (max-width: 736px) {
+  #navbar a {
+    height: 207px;
+  }
+
+  #navbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 500px;
+    border: none;
+    z-index: 1;
+    border-bottom: 3px solid white;
+  }
+  #main-doc {
+    position: relative;
+    margin: 500px 15px 0 15px;
+  }
+
+}
+@media only screen 
+  and (max-device-width: 400px) {
+  #main-doc {
+    margin-left: -10px;
+  }
+  code {
+    font-size: .75em;
+    margin-left: -20px;
+    max-width: 100%;
+    padding: 15px 45px 15px 10px;
+    min-width: 233px;
+  }
+  footer {
+    padding: 3px;
+  }
+}
+  
 
 
 
 
 
-
-
-
-
-
-
-/*
-<main id="doc">
-        <section class="main-section" id="title_describes_the_topic_of_that_section1">
-            <header>text that describes the topic of that section.</header>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <code></code>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </section>
-        <section class="main-section" id="title_describes_the_topic_of_that_section2">
-            <header>text that describes the topic of that section.</header>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <code></code>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-        </section>
-        <section class="main-section" id="title_describes_the_topic_of_that_section3">
-            <header>text that describes the topic of that section.</header>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <code></code>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-        </section>
-        <section class="main-section" id="title_describes_the_topic_of_that_section4">
-            <header>text that describes the topic of that section.</header>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <code></code>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-        </section>
-        <section class="main-section" id="title_describes_the_topic_of_that_section5">
-            <header>text that describes the topic of that section.</header>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <code></code>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-        </section>
-    </main>*/
