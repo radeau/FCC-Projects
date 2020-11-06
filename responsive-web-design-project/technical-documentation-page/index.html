@@ -9,10 +9,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav id="navbar" class="dropdown">
-        <button class="drpbtn">
-        </button>
-        <header class="dropdown-content">Bootstrap Content</header>
+    <nav id="navbar">
+        
+        <header>Bootstrap Content</header>
         <a href="#reboot" class="nav-link">Reboot</a>
         <a href="#typography" class="nav-link">Typography</a>
         <a href="#code" class="nav-link">Code</a>
@@ -24,295 +23,300 @@
        
         <section class="main-section" id="reboot">
             <header><h1>Reboot</h1></header>
-            <p>Reboot, a collection of element-specific CSS changes in a single file, kickstart Bootstrap to provide an elegant, consistent, and simple baseline to build upon.</p>
-            <h3>Approach</h3>
-            <p>Reboot builds upon Normalize, providing many HTML elements with somewhat opinionated styles using only element selectors. Additional styling is done only with classes. For example, we reboot some <code>&lttable&gt</code> styles for a simpler baseline and later provide <code>.table</code>, <code>.table-bordered</code>, and more.</p>
-            <p>Here are our guidelines and reasons for choosing what to override in Reboot:</p>
-            <ul>
-                <li>Update some browser default values to use <code>rem</code>s instead of <code>em</code>s for scalable component spacing.</li>
-                <li>Avoid <code>margin-top</code>. Vertical margins can collapse, yielding unexpected results. More importantly though, a single direction of <code>margin</code> is a simpler mental model.</li>
-                <li>For easier scaling across device sizes, block elements should use <code>rem</code>s for <code>margin</code>s.</li>
-                <li>Keep declarations of <code>font</code>-related properties to a minimum, using <code>inherit</code> whenever possible.</li>
-            </ul>
-            <h3>Page defaults</h3>
-            <p>The <code>&lthtml&gt</code> and <code>&ltbody&gt</code> elements are updated to provide better page-wide defaults. More specifically:</p>
+            <div class="content">
+                <p>Reboot, a collection of element-specific CSS changes in a single file, kickstart Bootstrap to provide an elegant, consistent, and simple baseline to build upon.</p>
+                <h3>Approach</h3>
+                <p>Reboot builds upon Normalize, providing many HTML elements with somewhat opinionated styles using only element selectors. Additional styling is done only with classes. For example, we reboot some <code>&lttable&gt</code> styles for a simpler baseline and later provide <code>.table</code>, <code>.table-bordered</code>, and more.</p>
+                <p>Here are our guidelines and reasons for choosing what to override in Reboot:</p>
                 <ul>
-                    <li>The box-sizing is globally set on every element—including <code>*::before</code> and <code>*::after</code>, to <code>border-box</code>. This ensures that the declared width of element is never exceeded due to padding or border.</li>
-                    <li>No base <code>font-size</code> is declared on the <code>&lthtml&gt</code>, but <code>16px</code> is assumed (the browser default). <code>font-size: 1rem</code> is applied on the <code>&ltbody&gt</code> for easy responsive type-scaling via media queries while respecting user preferences and ensuring a more accessible approach.</li>
-                    <li>The <code>&ltbody&gt</code> also sets a global <code>font-family</code>, <code>line-height</code>, and <code>text-align</code>. This is inherited later by some form elements to prevent font inconsistencies.</li>
-                    <li>For safety, the <code>&ltbody&gt</code> has a declared background-color, defaulting to <code>#fff</code>.</li>
+                    <li>Update some browser default values to use <code>rem</code>s instead of <code>em</code>s for scalable component spacing.</li>
+                    <li>Avoid <code>margin-top</code>. Vertical margins can collapse, yielding unexpected results. More importantly though, a single direction of <code>margin</code> is a simpler mental model.</li>
+                    <li>For easier scaling across device sizes, block elements should use <code>rem</code>s for <code>margin</code>s.</li>
+                    <li>Keep declarations of <code>font</code>-related properties to a minimum, using <code>inherit</code> whenever possible.</li>
                 </ul>
-            <h3>Native font stack</h3>
-            <p>The default web fonts (Helvetica Neue, Helvetica, and Arial) have been dropped in Bootstrap 4 and replaced with a “native font stack” for optimum text rendering on every device and OS. Read more about native font stacks in this Smashing Magazine article.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/reboot/">getbootstrap.com</a></p>
-            <p>This <code>font-family</code> is applied to the <code>&ltbody&gt</code> and automatically inherited globally throughout Bootstrap. To switch the global <code>font-family</code>, update <code>$font-family-base</code> and recompile Bootstrap.</p>
-            <h3>Headings and paragraphs</h3>
-            <p>All heading elements—e.g., <code>&lth1&gt</code>—and <code>&ltp&gt</code> are reset to have their <code>margin-top</code> removed. Headings have <code>margin-bottom: .5rem</code> added and paragraphs <code>margin-bottom: 1rem</code> for easy spacing.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/reboot/">getbootstrap.com</a></p>
-            <h3>Lists</h3>
-            <p>All lists—<code>&ltul&gt</code>, <code>&ltol&gt</code>, and <code>&ltdl&gt</code>—have their <code>margin-top</code> removed and a <code>margin-bottom: 1rem</code>. Nested lists have no <code>margin-bottom</code>.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/reboot/">getbootstrap.com</a></p>
-            <p>For simpler styling, clear hierarchy, and better spacing, description lists have updated <code>margin</code>s.  <code>&ltdd&gt</code>s reset <code>margin-left</code> to 0 and add <code>margin-bottom: .5rem</code>. <code>&ltdt&gt</code>s are <strong>bolded</strong>.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/reboot/">getbootstrap.com</a></p>
-            <h3>Preformatted text</h3>
-            <p>The <code>&ltpre&gt</code> element is reset to remove its <code>margin-top</code> and use <code>rem</code> units for its <code>margin-bottom</code>.</p>
-            <pre>
-                <code>
-                    .example-element {
-                        margin-bottom: 1rem;
-                      }
-                </code>
-            </pre>
-            <h3>Tables</h3>
-            <p>Tables are slightly adjusted to style <code>&ltcaption&gt</code>s, collapse borders, and ensure consistent <code>text-align</code> throughout. Additional changes for borders, padding, and more come with the <code>.table class</code>.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/reboot/">getbootstrap.com</a></p>
-            <h3>Forms</h3>
-            <p>Various form elements have been rebooted for simpler base styles. Here are some of the most notable changes:</p>
-            <ul>
-                <li><code>&ltfieldset&gt</code>s have no borders, padding, or margin so they can be easily used as wrappers for individual inputs or groups of inputs.</li>
-                <li><code>&ltlegend&gt</code>s, like fieldsets, have also been restyled to be displayed as a heading of sorts.</li>
-                <li><code>&ltlabel&gt</code>s are set to display: inline-block to allow margin to be applied.</li>
-                <li><code>&ltinput&gt</code>s, <code>&ltselect&gt</code>s, <code>&lttextarea&gt</code>s, and <code>&ltbutton&gt</code>s are mostly addressed by Normalize, but Reboot removes their margin and sets line-height: inherit, too.</li>
-                <li><code>&lttextarea&gt</code>s are modified to only be resizable vertically as horizontal resizing often “breaks” page layout.</li>
-                <li><code>&ltbutton&gt</code>s and <code>&ltinput&gt</code> button elements have <code>cursor: pointer</code> when <code>:not(:disabled)</code>.</li>
-            </ul>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/reboot/">getbootstrap.com</a></p>
-            <h3>Pointers on buttons</h3>
-            <p>Reboot includes an enhancement for <code>role="button"</code> to change the default cursor to <code>pointer</code>. Add this attribute to elements to help indicate elements are interactive. This role isn’t necessary for <code>&ltbutton&gt</code> elements, which get their own <code>cursor</code> change.</p>
-            <pre>
-                <code>
-                    &ltspan role="button" tabindex="0"&gtNon-button element button&lt/span&gt
-                </code>
-            </pre>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/reboot/">getbootstrap.com</a></p>
-            <h3>Address</h3>
-            <p>The <code>&ltaddress&gt</code> element is updated to reset the browser default <code>font-style</code> from <code>italic</code> to <code>normal. line-height</code> is also now inherited, and <code>margin-bottom: 1rem</code> has been added. <code>&ltaddress&gt</code>s are for presenting contact information for the nearest ancestor (or an entire body of work). Preserve formatting by ending lines with <code>&ltbr&gt</code>.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/reboot/">getbootstrap.com</a></p>
-            <h3>Blockquote</h3>
-            <p>The default <code>margin</code> on blockquotes is <code>1em 40px</code>, so we reset that to <code>0 0 1rem</code> for something more consistent with other elements.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/reboot/">getbootstrap.com</a></p>
-            <h3>Inline elements</h3>
-            <p>The <code>&ltabbr&gt</code> element receives basic styling to make it stand out amongst paragraph text.</p>
-            <pre>
-                <code>
-                    Nulla <abbr title="attribute">attr</abbr> vitae elit libero, a pharetra augue. 
-                </code>
-            </pre>
-            <h3>Summary</h3>
-            <p>The default cursor on summary is text, so we reset that to pointer to convey that the element can be interacted with by clicking on it.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/reboot/">getbootstrap.com</a></p>
-            <h3>HTML5 <code>[hidden]</code> attribute</h3>
-            <p>HTML5 adds a new global attribute named [hidden], which is styled as display: none by default. Borrowing an idea from PureCSS, we improve upon this default by making [hidden] { display: none !important; } to help prevent its display from getting accidentally overridden. While [hidden] isn’t natively supported by IE10, the explicit declaration in our CSS gets around that problem.</p>
-            <pre>
-                <code>
-                    &ltinput type="text" hidden&gt
-                </code>
-            </pre>
-            <h3>jQuery incompatibility</h3>
-            <p><code>[hidden]</code> is not compatible with jQuery’s <code>$(...).hide()</code> and <code>$(...).show()s</code> methods. Therefore, we don’t currently especially endorse <code>[hidden]</code> over other techniques for managing the display of elements.</p>
-            <p>To merely toggle the visibility of an element, meaning its <code>display</code> is not modified and the element can still affect the flow of the document, use the <code>.invisible</code> class instead.</p>
+                <h3>Page defaults</h3>
+                <p>The <code>&lthtml&gt</code> and <code>&ltbody&gt</code> elements are updated to provide better page-wide defaults. More specifically:</p>
+                    <ul>
+                        <li>The box-sizing is globally set on every element—including <code>*::before</code> and <code>*::after</code>, to <code>border-box</code>. This ensures that the declared width of element is never exceeded due to padding or border.</li>
+                        <li>No base <code>font-size</code> is declared on the <code>&lthtml&gt</code>, but <code>16px</code> is assumed (the browser default). <code>font-size: 1rem</code> is applied on the <code>&ltbody&gt</code> for easy responsive type-scaling via media queries while respecting user preferences and ensuring a more accessible approach.</li>
+                        <li>The <code>&ltbody&gt</code> also sets a global <code>font-family</code>, <code>line-height</code>, and <code>text-align</code>. This is inherited later by some form elements to prevent font inconsistencies.</li>
+                        <li>For safety, the <code>&ltbody&gt</code> has a declared background-color, defaulting to <code>#fff</code>.</li>
+                    </ul>
+                <h3>Native font stack</h3>
+                <p>The default web fonts (Helvetica Neue, Helvetica, and Arial) have been dropped in Bootstrap 4 and replaced with a “native font stack” for optimum text rendering on every device and OS. Read more about native font stacks in this Smashing Magazine article.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/reboot/">getbootstrap.com</a></p>
+                <p>This <code>font-family</code> is applied to the <code>&ltbody&gt</code> and automatically inherited globally throughout Bootstrap. To switch the global <code>font-family</code>, update <code>$font-family-base</code> and recompile Bootstrap.</p>
+                <h3>Headings and paragraphs</h3>
+                <p>All heading elements—e.g., <code>&lth1&gt</code>—and <code>&ltp&gt</code> are reset to have their <code>margin-top</code> removed. Headings have <code>margin-bottom: .5rem</code> added and paragraphs <code>margin-bottom: 1rem</code> for easy spacing.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/reboot/">getbootstrap.com</a></p>
+                <h3>Lists</h3>
+                <p>All lists—<code>&ltul&gt</code>, <code>&ltol&gt</code>, and <code>&ltdl&gt</code>—have their <code>margin-top</code> removed and a <code>margin-bottom: 1rem</code>. Nested lists have no <code>margin-bottom</code>.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/reboot/">getbootstrap.com</a></p>
+                <p>For simpler styling, clear hierarchy, and better spacing, description lists have updated <code>margin</code>s.  <code>&ltdd&gt</code>s reset <code>margin-left</code> to 0 and add <code>margin-bottom: .5rem</code>. <code>&ltdt&gt</code>s are <strong>bolded</strong>.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/reboot/">getbootstrap.com</a></p>
+                <h3>Preformatted text</h3>
+                <p>The <code>&ltpre&gt</code> element is reset to remove its <code>margin-top</code> and use <code>rem</code> units for its <code>margin-bottom</code>.</p>
+                <pre>
+                    <code>
+                        .example-element {
+                            margin-bottom: 1rem;
+                        }
+                    </code>
+                </pre>
+                <h3>Tables</h3>
+                <p>Tables are slightly adjusted to style <code>&ltcaption&gt</code>s, collapse borders, and ensure consistent <code>text-align</code> throughout. Additional changes for borders, padding, and more come with the <code>.table class</code>.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/reboot/">getbootstrap.com</a></p>
+                <h3>Forms</h3>
+                <p>Various form elements have been rebooted for simpler base styles. Here are some of the most notable changes:</p>
+                <ul>
+                    <li><code>&ltfieldset&gt</code>s have no borders, padding, or margin so they can be easily used as wrappers for individual inputs or groups of inputs.</li>
+                    <li><code>&ltlegend&gt</code>s, like fieldsets, have also been restyled to be displayed as a heading of sorts.</li>
+                    <li><code>&ltlabel&gt</code>s are set to display: inline-block to allow margin to be applied.</li>
+                    <li><code>&ltinput&gt</code>s, <code>&ltselect&gt</code>s, <code>&lttextarea&gt</code>s, and <code>&ltbutton&gt</code>s are mostly addressed by Normalize, but Reboot removes their margin and sets line-height: inherit, too.</li>
+                    <li><code>&lttextarea&gt</code>s are modified to only be resizable vertically as horizontal resizing often “breaks” page layout.</li>
+                    <li><code>&ltbutton&gt</code>s and <code>&ltinput&gt</code> button elements have <code>cursor: pointer</code> when <code>:not(:disabled)</code>.</li>
+                </ul>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/reboot/">getbootstrap.com</a></p>
+                <h3>Pointers on buttons</h3>
+                <p>Reboot includes an enhancement for <code>role="button"</code> to change the default cursor to <code>pointer</code>. Add this attribute to elements to help indicate elements are interactive. This role isn’t necessary for <code>&ltbutton&gt</code> elements, which get their own <code>cursor</code> change.</p>
+                <pre>
+                    <code>
+                        &ltspan role="button" tabindex="0"&gtNon-button element button&lt/span&gt
+                    </code>
+                </pre>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/reboot/">getbootstrap.com</a></p>
+                <h3>Address</h3>
+                <p>The <code>&ltaddress&gt</code> element is updated to reset the browser default <code>font-style</code> from <code>italic</code> to <code>normal. line-height</code> is also now inherited, and <code>margin-bottom: 1rem</code> has been added. <code>&ltaddress&gt</code>s are for presenting contact information for the nearest ancestor (or an entire body of work). Preserve formatting by ending lines with <code>&ltbr&gt</code>.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/reboot/">getbootstrap.com</a></p>
+                <h3>Blockquote</h3>
+                <p>The default <code>margin</code> on blockquotes is <code>1em 40px</code>, so we reset that to <code>0 0 1rem</code> for something more consistent with other elements.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/reboot/">getbootstrap.com</a></p>
+                <h3>Inline elements</h3>
+                <p>The <code>&ltabbr&gt</code> element receives basic styling to make it stand out amongst paragraph text.</p>
+                <pre>
+                    <code>
+                        Nulla <abbr title="attribute">attr</abbr> vitae elit libero, a pharetra augue. 
+                    </code>
+                </pre>
+                <h3>Summary</h3>
+                <p>The default cursor on summary is text, so we reset that to pointer to convey that the element can be interacted with by clicking on it.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/reboot/">getbootstrap.com</a></p>
+                <h3>HTML5 <code>[hidden]</code> attribute</h3>
+                <p>HTML5 adds a new global attribute named [hidden], which is styled as display: none by default. Borrowing an idea from PureCSS, we improve upon this default by making [hidden] { display: none !important; } to help prevent its display from getting accidentally overridden. While [hidden] isn’t natively supported by IE10, the explicit declaration in our CSS gets around that problem.</p>
+                <pre>
+                    <code>
+                        &ltinput type="text" hidden&gt
+                    </code>
+                </pre>
+                <h3>jQuery incompatibility</h3>
+                <p><code>[hidden]</code> is not compatible with jQuery’s <code>$(...).hide()</code> and <code>$(...).show()s</code> methods. Therefore, we don’t currently especially endorse <code>[hidden]</code> over other techniques for managing the display of elements.</p>
+                <p>To merely toggle the visibility of an element, meaning its <code>display</code> is not modified and the element can still affect the flow of the document, use the <code>.invisible</code> class instead.</p>
+            </div>
         </section>
         <section class="main-section" id="typography">
             <header><h1>Typography</h1></header>
-            <p>Documentation and examples for Bootstrap typography, including global settings, headings, body text, lists, and more.</p>
-            <h3>Global settings</h3>
-            <p>Bootstrap sets basic global display, typography, and link styles. When more control is needed, check out the textual utility classes.</p>
-            <ul>
-                <li>Use a native font stack that selects the best <code>font-family</code> for each OS and device.</li>
-                <li>For a more inclusive and accessible type scale, we assume the browser default root <code>font-size</code> (typically 16px) so visitors can customize their browser defaults as needed.</li>
-                <li>Use the <code>$font-family-base</code>, <code>$font-size-base</code>, and <code>$line-height-base</code> attributes as our typographic base applied to the <code>&ltbody&gt</code>.</li>
-                <li>Set the global link color via <code>$link-color</code> and apply link underlines only on <code>:hover</code>.</li>
-                <li>Use <code>$body-bg</code> to set a <code>background-color</code> on the <code>&ltbody&gt</code> (#fff by default).</li>
-            </ul>
-            <p>These styles can be found within <code>_reboot.scss</code>, and the global variables are defined in <code>_variables.scss</code>. Make sure to set <code>$font-size-base</code> in rem.</p>
-            <h3>Headings</h3>
-            <p>All HTML headings, <code>&lth1&gt</code> through <code>&lth6&gt</code>, are available.</p>
-            <pre>
-                <code>
-                    &lth1&gth1. Bootstrap heading&lt/h1&gt
-                    &lth2&gth2. Bootstrap heading&lt/h2&gt
-                    &lth3&gth3. Bootstrap heading&lt/h3&gt
-                    &lth4&gth4. Bootstrap heading&lt/h4&gt
-                    &lth5&gth5. Bootstrap heading&lt/h5&gt
-                    &lth6&gth6. Bootstrap heading&lt/h6&gt
-                </code>
-            </pre>
-            <p>Open example on <a href="https://getbootstrap.com/docs/4.5/content/typography/">getbootstrap.com</a></p>
-            <p><code>.h1</code> through <code>.h6</code> classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.</p>
-            <pre>
-                <code>
-                    &ltp class="h1"&gth1. Bootstrap heading&lt/p&gt
-                    &ltp class="h2"&gth2. Bootstrap heading&lt/p&gt
-                    &ltp class="h3"&gth3. Bootstrap heading&lt/p&gt
-                    &ltp class="h4"&gth4. Bootstrap heading&lt/p&gt
-                    &ltp class="h5"&gth5. Bootstrap heading&lt/p&gt
-                    &ltp class="h6"&gth6. Bootstrap heading&lt/p&gt
-                </code>
-            </pre>
-            <p>Open example on <a href="https://getbootstrap.com/docs/4.5/content/typography/">getbootstrap.com</a></p>
-            <h3>Customizing headings</h3>
-            <p>Use the included utility classes to recreate the small secondary heading text from Bootstrap 3.</p>
-            <p>Open example on <a href="https://getbootstrap.com/docs/4.5/content/typography/">getbootstrap.com</a></p>
-            <h3>Display headings</h3>
-            <p>Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a display heading—a larger, slightly more opinionated heading style. Keep in mind these headings are not responsive by default, but it’s possible to enable responsive font sizes.</p>
-            <p>Open example on <a href="https://getbootstrap.com/docs/4.5/content/typography/">getbootstrap.com</a></p>
-            <h3>Lead</h3>
-            <p>Make a paragraph stand out by adding <code>.lead</code>.</p>
-            <p>Open example on <a href="https://getbootstrap.com/docs/4.5/content/typography/">getbootstrap.com</a></p>
-            <h3>Inline text elements</h3>
-            <p>Styling for common inline HTML5 elements.</p>
-            <p>Open example on <a href="https://getbootstrap.com/docs/4.5/content/typography/">getbootstrap.com</a></p>
-            <p><code>.mark</code> and <code>.small</code> classes are also available to apply the same styles as <code>&ltmark&gt</code> and <code>&ltsmall&gt</code> while avoiding any unwanted semantic implications that the tags would bring.</p>
-            <p>While not shown above, feel free to use <code>&ltb&gt</code> and <code>&lti&gt</code> in HTML5. <code>&ltb&gt</code> is meant to highlight words or phrases without conveying additional importance while <code>&lti&gt</code> is mostly for voice, technical terms, etc.</p>
-            <h3>Text utilities</h3>
-            <p>Change text alignment, transform, style, weight, and color with our text utilities and color utilities.</p>
-            <h3>Abbreviations</h3>
-            <p>Stylized implementation of HTML’s <code>&ltabbr&gt</code> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.</p>
-            <p>Add <code>.initialism</code> to an abbreviation for a slightly smaller <code>font-size</code>.</p>
-            <p>Open example on <a href="https://getbootstrap.com/docs/4.5/content/typography/">getbootstrap.com</a></p>
-            <h3>Blockquotes</h3>
-            <p>For quoting blocks of content from another source within your document. Wrap <code>&ltblockquote class="blockquote"&gt&lt/blockquote&gt</code> around any HTML as the quote.</p>
-            <p>Open example on <a href="https://getbootstrap.com/docs/4.5/content/typography/">getbootstrap.com</a></p>
-            <h3>Naming a source</h3>
-            <p>Add a <code>&ltfooter class="blockquote-footer"&gt&lt/footer&gt</code> for identifying the source. Wrap the name of the source work in <code>&ltcite&gt</code>.</p>
-            <p>Open example on <a href="https://getbootstrap.com/docs/4.5/content/typography/">getbootstrap.com</a></p>
-            <h3>Alignment</h3>
-            <p>Use text utilities as needed to change the alignment of your blockquote.</p>
-            <p>Open example on <a href="https://getbootstrap.com/docs/4.5/content/typography/">getbootstrap.com</a></p>
-            <h2>Lists</h2>
-            <h3>Unstyled</h3>
-            <p>Remove the default <code>list-style</code> and left margin on list items (immediate children only). This only applies to immediate children list items, meaning you will need to add the class for any nested lists as well.</p>
-            <p>Open example on <a href="https://getbootstrap.com/docs/4.5/content/typography/">getbootstrap.com</a></p>
-            <h3>Inline</h3>
-            <p>Remove a list’s bullets and apply some light margin with a combination of two classes, <code>.list-inline</code> and <code>.list-inline-item</code>.</p>
-            <p>Open example on <a href="https://getbootstrap.com/docs/4.5/content/typography/">getbootstrap.com</a></p>
-            <h3>Description list alignment</h3>
-            <p>Align terms and descriptions horizontally by using our grid system’s predefined classes (or semantic mixins). For longer terms, you can optionally add a .text-truncate class to truncate the text with an ellipsis.</p>
-            <p>Open example on <a href="https://getbootstrap.com/docs/4.5/content/typography/">getbootstrap.com</a></p>
-            <h3>Responsive font sizes</h3>
-            <p>As of v4.3.0, Bootstrap ships with the option to enable responsive font sizes, allowing text to scale more naturally across device and viewport sizes. RFS can be enabled by changing the <code>$enable-responsive-font-sizes</code> Sass variable to <code>true</code> and recompiling Bootstrap.</p>
-            <p>To support RFS, we use a Sass mixin to replace our normal font-size properties. Responsive font sizes will be compiled into <code>calc()</code> functions with a mix of <code>rem</code> and viewport units to enable the responsive scaling behavior. More about RFS and its configuration can be found on its GitHub repository.</p>
-
+            <div class="content">
+                <p>Documentation and examples for Bootstrap typography, including global settings, headings, body text, lists, and more.</p>
+                <h3>Global settings</h3>
+                <p>Bootstrap sets basic global display, typography, and link styles. When more control is needed, check out the textual utility classes.</p>
+                <ul>
+                    <li>Use a native font stack that selects the best <code>font-family</code> for each OS and device.</li>
+                    <li>For a more inclusive and accessible type scale, we assume the browser default root <code>font-size</code> (typically 16px) so visitors can customize their browser defaults as needed.</li>
+                    <li>Use the <code>$font-family-base</code>, <code>$font-size-base</code>, and <code>$line-height-base</code> attributes as our typographic base applied to the <code>&ltbody&gt</code>.</li>
+                    <li>Set the global link color via <code>$link-color</code> and apply link underlines only on <code>:hover</code>.</li>
+                    <li>Use <code>$body-bg</code> to set a <code>background-color</code> on the <code>&ltbody&gt</code> (#fff by default).</li>
+                </ul>
+                <p>These styles can be found within <code>_reboot.scss</code>, and the global variables are defined in <code>_variables.scss</code>. Make sure to set <code>$font-size-base</code> in rem.</p>
+                <h3>Headings</h3>
+                <p>All HTML headings, <code>&lth1&gt</code> through <code>&lth6&gt</code>, are available.</p>
+                <pre>
+                    <code>
+                        &lth1&gth1. Bootstrap heading&lt/h1&gt
+                        &lth2&gth2. Bootstrap heading&lt/h2&gt
+                        &lth3&gth3. Bootstrap heading&lt/h3&gt
+                        &lth4&gth4. Bootstrap heading&lt/h4&gt
+                        &lth5&gth5. Bootstrap heading&lt/h5&gt
+                        &lth6&gth6. Bootstrap heading&lt/h6&gt
+                    </code>
+                </pre>
+                <p>Open example on <a href="https://getbootstrap.com/docs/4.5/content/typography/">getbootstrap.com</a></p>
+                <p><code>.h1</code> through <code>.h6</code> classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.</p>
+                <pre>
+                    <code>
+                        &ltp class="h1"&gth1. Bootstrap heading&lt/p&gt
+                        &ltp class="h2"&gth2. Bootstrap heading&lt/p&gt
+                        &ltp class="h3"&gth3. Bootstrap heading&lt/p&gt
+                        &ltp class="h4"&gth4. Bootstrap heading&lt/p&gt
+                        &ltp class="h5"&gth5. Bootstrap heading&lt/p&gt
+                        &ltp class="h6"&gth6. Bootstrap heading&lt/p&gt
+                    </code>
+                </pre>
+                <p>Open example on <a href="https://getbootstrap.com/docs/4.5/content/typography/">getbootstrap.com</a></p>
+                <h3>Customizing headings</h3>
+                <p>Use the included utility classes to recreate the small secondary heading text from Bootstrap 3.</p>
+                <p>Open example on <a href="https://getbootstrap.com/docs/4.5/content/typography/">getbootstrap.com</a></p>
+                <h3>Display headings</h3>
+                <p>Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a display heading—a larger, slightly more opinionated heading style. Keep in mind these headings are not responsive by default, but it’s possible to enable responsive font sizes.</p>
+                <p>Open example on <a href="https://getbootstrap.com/docs/4.5/content/typography/">getbootstrap.com</a></p>
+                <h3>Lead</h3>
+                <p>Make a paragraph stand out by adding <code>.lead</code>.</p>
+                <p>Open example on <a href="https://getbootstrap.com/docs/4.5/content/typography/">getbootstrap.com</a></p>
+                <h3>Inline text elements</h3>
+                <p>Styling for common inline HTML5 elements.</p>
+                <p>Open example on <a href="https://getbootstrap.com/docs/4.5/content/typography/">getbootstrap.com</a></p>
+                <p><code>.mark</code> and <code>.small</code> classes are also available to apply the same styles as <code>&ltmark&gt</code> and <code>&ltsmall&gt</code> while avoiding any unwanted semantic implications that the tags would bring.</p>
+                <p>While not shown above, feel free to use <code>&ltb&gt</code> and <code>&lti&gt</code> in HTML5. <code>&ltb&gt</code> is meant to highlight words or phrases without conveying additional importance while <code>&lti&gt</code> is mostly for voice, technical terms, etc.</p>
+                <h3>Text utilities</h3>
+                <p>Change text alignment, transform, style, weight, and color with our text utilities and color utilities.</p>
+                <h3>Abbreviations</h3>
+                <p>Stylized implementation of HTML’s <code>&ltabbr&gt</code> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.</p>
+                <p>Add <code>.initialism</code> to an abbreviation for a slightly smaller <code>font-size</code>.</p>
+                <p>Open example on <a href="https://getbootstrap.com/docs/4.5/content/typography/">getbootstrap.com</a></p>
+                <h3>Blockquotes</h3>
+                <p>For quoting blocks of content from another source within your document. Wrap <code>&ltblockquote class="blockquote"&gt&lt/blockquote&gt</code> around any HTML as the quote.</p>
+                <p>Open example on <a href="https://getbootstrap.com/docs/4.5/content/typography/">getbootstrap.com</a></p>
+                <h3>Naming a source</h3>
+                <p>Add a <code>&ltfooter class="blockquote-footer"&gt&lt/footer&gt</code> for identifying the source. Wrap the name of the source work in <code>&ltcite&gt</code>.</p>
+                <p>Open example on <a href="https://getbootstrap.com/docs/4.5/content/typography/">getbootstrap.com</a></p>
+                <h3>Alignment</h3>
+                <p>Use text utilities as needed to change the alignment of your blockquote.</p>
+                <p>Open example on <a href="https://getbootstrap.com/docs/4.5/content/typography/">getbootstrap.com</a></p>
+                <h2>Lists</h2>
+                <h3>Unstyled</h3>
+                <p>Remove the default <code>list-style</code> and left margin on list items (immediate children only). This only applies to immediate children list items, meaning you will need to add the class for any nested lists as well.</p>
+                <p>Open example on <a href="https://getbootstrap.com/docs/4.5/content/typography/">getbootstrap.com</a></p>
+                <h3>Inline</h3>
+                <p>Remove a list’s bullets and apply some light margin with a combination of two classes, <code>.list-inline</code> and <code>.list-inline-item</code>.</p>
+                <p>Open example on <a href="https://getbootstrap.com/docs/4.5/content/typography/">getbootstrap.com</a></p>
+                <h3>Description list alignment</h3>
+                <p>Align terms and descriptions horizontally by using our grid system’s predefined classes (or semantic mixins). For longer terms, you can optionally add a .text-truncate class to truncate the text with an ellipsis.</p>
+                <p>Open example on <a href="https://getbootstrap.com/docs/4.5/content/typography/">getbootstrap.com</a></p>
+                <h3>Responsive font sizes</h3>
+                <p>As of v4.3.0, Bootstrap ships with the option to enable responsive font sizes, allowing text to scale more naturally across device and viewport sizes. RFS can be enabled by changing the <code>$enable-responsive-font-sizes</code> Sass variable to <code>true</code> and recompiling Bootstrap.</p>
+                <p>To support RFS, we use a Sass mixin to replace our normal font-size properties. Responsive font sizes will be compiled into <code>calc()</code> functions with a mix of <code>rem</code> and viewport units to enable the responsive scaling behavior. More about RFS and its configuration can be found on its GitHub repository.</p>
+            </div>
         </section>
-
 
         <section class="main-section" id="code">
             <header><h1>Code</h1></header>
-            <p>Documentation and examples for displaying inline and multiline blocks of code with Bootstrap.</p>
-            <h3>Inline code</h3>
-            <p>Wrap inline snippets of code with <code>&ltcode&gt</code>. Be sure to escape HTML angle brackets.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/code/">getbootstrap.com</a></p>
-            <h3>Code blocks</h3>
-            <p>Use <code>&ltpre&gt</code>s for multiple lines of code. Once again, be sure to escape any angle brackets in the code for proper rendering. You may optionally add the <code>.pre-scrollable</code> class, which will set a max-height of 340px and provide a y-axis scrollbar.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/code/">getbootstrap.com</a></p>
+            <div class="content">
+                <p>Documentation and examples for displaying inline and multiline blocks of code with Bootstrap.</p>
+                <h3>Inline code</h3>
+                <p>Wrap inline snippets of code with <code>&ltcode&gt</code>. Be sure to escape HTML angle brackets.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/code/">getbootstrap.com</a></p>
+                <h3>Code blocks</h3>
+                <p>Use <code>&ltpre&gt</code>s for multiple lines of code. Once again, be sure to escape any angle brackets in the code for proper rendering. You may optionally add the <code>.pre-scrollable</code> class, which will set a max-height of 340px and provide a y-axis scrollbar.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/code/">getbootstrap.com</a></p>
 
-            <h3>Variables</h3>
-            <p>For indicating variables use the<code>&ltvar&gt</code> tag.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/code/">getbootstrap.com</a></p>
+                <h3>Variables</h3>
+                <p>For indicating variables use the<code>&ltvar&gt</code> tag.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/code/">getbootstrap.com</a></p>
 
-            <h3>User input</h3>
-            <p>Use the <code>&ltkbd&gt</code> to indicate input that is typically entered via keyboard.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/code/">getbootstrap.com</a></p>
+                <h3>User input</h3>
+                <p>Use the <code>&ltkbd&gt</code> to indicate input that is typically entered via keyboard.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/code/">getbootstrap.com</a></p>
 
-            <h3>Sample output</h3>
-            <p>For indicating sample output from a program use the <code>&ltsamp&gt</code> tag.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/code/">getbootstrap.com</a></p>
-
+                <h3>Sample output</h3>
+                <p>For indicating sample output from a program use the <code>&ltsamp&gt</code> tag.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/code/">getbootstrap.com</a></p>
+            </div>
         </section>
 
         <section class="main-section" id="images">
             <header><h1>Images</h1></header>
-            <p>Documentation and examples for opting images into responsive behavior (so they never become larger than their parent elements) and add lightweight styles to them—all via classes.</p>
-            <h3>Responsive images</h3>
-            <p>Images in Bootstrap are made responsive with <code>.img-fluid</code>. <code>max-width: 100%;</code> and <code>height: auto;</code> are applied to the image so that it scales with the parent element.</p>
-            <h4>SVG images and Internet Explorer</h4>
-            <p>In Internet Explorer 10 and 11, SVG images with <code>.img-fluid</code> are disproportionately sized. To fix this, add <code>width: 100%;</code> or <code>.w-100</code> where necessary. This fix improperly sizes other image formats, so Bootstrap doesn’t apply it automatically.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/images/">getbootstrap.com</a></p>
+            <div class="content">
+                <p>Documentation and examples for opting images into responsive behavior (so they never become larger than their parent elements) and add lightweight styles to them—all via classes.</p>
+                <h3>Responsive images</h3>
+                <p>Images in Bootstrap are made responsive with <code>.img-fluid</code>. <code>max-width: 100%;</code> and <code>height: auto;</code> are applied to the image so that it scales with the parent element.</p>
+                <h4>SVG images and Internet Explorer</h4>
+                <p>In Internet Explorer 10 and 11, SVG images with <code>.img-fluid</code> are disproportionately sized. To fix this, add <code>width: 100%;</code> or <code>.w-100</code> where necessary. This fix improperly sizes other image formats, so Bootstrap doesn’t apply it automatically.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/images/">getbootstrap.com</a></p>
 
-            <h3>Image thumbnails</h3>
-            <p>In addition to our border-radius utilities, you can use .img-thumbnail to give an image a rounded 1px border appearance.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/images/">getbootstrap.com</a></p>
-            
-            <h3>Aligning images</h3>
-            <p>Align images with the helper float classes or text alignment classes. block-level images can be centered using the .mx-auto margin utility class.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/images/">getbootstrap.com</a></p>
+                <h3>Image thumbnails</h3>
+                <p>In addition to our border-radius utilities, you can use .img-thumbnail to give an image a rounded 1px border appearance.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/images/">getbootstrap.com</a></p>
+                
+                <h3>Aligning images</h3>
+                <p>Align images with the helper float classes or text alignment classes. block-level images can be centered using the .mx-auto margin utility class.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/images/">getbootstrap.com</a></p>
 
-            <h3>Picture</h3> 
-            <p>If you are using the <picture> element to specify multiple <source> elements for a specific <img>, make sure to add the .img-* classes to the <img> and not to the <picture> tag.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/images/">getbootstrap.com</a></p>
-
-
+                <h3>Picture</h3> 
+                <p>If you are using the <picture> element to specify multiple <source> elements for a specific <img>, make sure to add the .img-* classes to the <img> and not to the <picture> tag.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/images/">getbootstrap.com</a></p>
+            </div>
         </section>
         <section class="main-section" id="tables">
             <header><h1>Tables</h1></header>
-            <p>Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with Bootstrap.</p>
-            <h3>Examples</h3>
-            <p>Due to the widespread use of tables across third-party widgets like calendars and date pickers, we’ve designed our tables to be opt-in. Just add the base class <code>.table</code> to any <code>&lttable&gt</code>, then extend with custom styles or our various included modifier classes.</p>
-            <p>Using the most basic table markup, here’s how <code>.table</code>-based tables look in Bootstrap. All table styles are inherited in Bootstrap 4, meaning any nested tables will be styled in the same manner as the parent.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
-            <p>You can also invert the colors—with light text on dark backgrounds—with <code>.table-dark</code>.</p>
-            <h3>Table head options</h3>
-            <p>Similar to tables and dark tables, use the modifier classes <code>.thead-light</code> or <code>.thead-dark</code> to make <code>&ltthead&gt</code>s appear light or dark gray.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
-            <h3>Striped rows</h3>
-            <p>Use <code>.table-striped</code> to add zebra-striping to any table row within the <code>&ltbody&gt</code>.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
-            <h3>Bordered table</h3>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
-
-            <h3>Borderless table</h3>
-            <p>Add <code>.table-borderless</code> for a table without borders.</p>
-            <p><code>.table-borderless</code> can also be used on dark tables.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
-
-
-            <h3>Hoverable rows</h3>
-            <p>Add <code>.table-hover</code> to enable a hover state on table rows within a <code>&ltbody&gt</code>.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
-           
-            <h3>Small table</h3>
-            <p>Add <code>.table-sm</code> to make tables more compact by cutting cell padding in half.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
-
-            <h3>Contextual classes</h3>
-            <p>Use contextual classes to color table rows or individual cells.</p>
-            <p>Regular table background variants are not available with the dark table, however, you may use text or background utilities to achieve similar styles.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
-            
-            <h4>Conveying meaning to assistive technologies</h4>
-            <p>Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (e.g. the visible text), or is included through alternative means, such as additional text hidden with the <code>.sr-only</code> class.</p>
-            <p>Create responsive tables by wrapping any <code>.table</code> with <code>.table-responsive{-sm|-md|-lg|-xl}</code>, making the table scroll horizontally at each max-width breakpoint of up to (but not including) 576px, 768px, 992px, and 1120px, respectively.</p>
-            <p>Note that since browsers do not currently support range context queries, we work around the limitations of min- and max- prefixes and viewports with fractional widths (which can occur under certain conditions on high-dpi devices, for instance) by using values with higher precision for these comparisons.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
-            
-            <h3>Captions</h3>
-            <p>A <code>&ltcaption&gt</code> functions like a heading for a table. It helps users with screen readers to find a table and understand what it’s about and decide if they want to read it.</p>
-            
-            <h3>Responsive tables</h3>
-            <p>Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by wrapping a .table with .table-responsive. Or, pick a maximum breakpoint with which to have a responsive table up to by using <code>.table-responsive{-sm|-md|-lg|-xl}</code>.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
-
-            <h4>Vertical clipping/truncation</h4>
-            <p>Responsive tables make use of <code>overflow-y: hidden</code>, which clips off any content that goes beyond the bottom or top edges of the table. In particular, this can clip off dropdown menus and other third-party widgets.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
-            
-            <h3>Always responsive</h3>
-            <p>Across every breakpoint, use <code>.table-responsive</code> for horizontally scrolling tables.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
-
-            <h3>Breakpoint specific</h3>
-            <p>Use <code>.table-responsive{-sm|-md|-lg|-xl}</code> as needed to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
+            <div class="content">
+                <p>Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with Bootstrap.</p>
+                <h3>Examples</h3>
+                <p>Due to the widespread use of tables across third-party widgets like calendars and date pickers, we’ve designed our tables to be opt-in. Just add the base class <code>.table</code> to any <code>&lttable&gt</code>, then extend with custom styles or our various included modifier classes.</p>
+                <p>Using the most basic table markup, here’s how <code>.table</code>-based tables look in Bootstrap. All table styles are inherited in Bootstrap 4, meaning any nested tables will be styled in the same manner as the parent.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
+                <p>You can also invert the colors—with light text on dark backgrounds—with <code>.table-dark</code>.</p>
+                <h3>Table head options</h3>
+                <p>Similar to tables and dark tables, use the modifier classes <code>.thead-light</code> or <code>.thead-dark</code> to make <code>&ltthead&gt</code>s appear light or dark gray.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
+                <h3>Striped rows</h3>
+                <p>Use <code>.table-striped</code> to add zebra-striping to any table row within the <code>&ltbody&gt</code>.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
+                <h3>Bordered table</h3>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
+    
+                <h3>Borderless table</h3>
+                <p>Add <code>.table-borderless</code> for a table without borders.</p>
+                <p><code>.table-borderless</code> can also be used on dark tables.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
+    
+                <h3>Hoverable rows</h3>
+                <p>Add <code>.table-hover</code> to enable a hover state on table rows within a <code>&ltbody&gt</code>.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
+               
+                <h3>Small table</h3>
+                <p>Add <code>.table-sm</code> to make tables more compact by cutting cell padding in half.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
+    
+                <h3>Contextual classes</h3>
+                <p>Use contextual classes to color table rows or individual cells.</p>
+                <p>Regular table background variants are not available with the dark table, however, you may use text or background utilities to achieve similar styles.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
+                
+                <h4>Conveying meaning to assistive technologies</h4>
+                <p>Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (e.g. the visible text), or is included through alternative means, such as additional text hidden with the <code>.sr-only</code> class.</p>
+                <p>Create responsive tables by wrapping any <code>.table</code> with <code>.table-responsive{-sm|-md|-lg|-xl}</code>, making the table scroll horizontally at each max-width breakpoint of up to (but not including) 576px, 768px, 992px, and 1120px, respectively.</p>
+                <p>Note that since browsers do not currently support range context queries, we work around the limitations of min- and max- prefixes and viewports with fractional widths (which can occur under certain conditions on high-dpi devices, for instance) by using values with higher precision for these comparisons.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
+                
+                <h3>Captions</h3>
+                <p>A <code>&ltcaption&gt</code> functions like a heading for a table. It helps users with screen readers to find a table and understand what it’s about and decide if they want to read it.</p>
+                
+                <h3>Responsive tables</h3>
+                <p>Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by wrapping a .table with .table-responsive. Or, pick a maximum breakpoint with which to have a responsive table up to by using <code>.table-responsive{-sm|-md|-lg|-xl}</code>.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
+    
+                <h4>Vertical clipping/truncation</h4>
+                <p>Responsive tables make use of <code>overflow-y: hidden</code>, which clips off any content that goes beyond the bottom or top edges of the table. In particular, this can clip off dropdown menus and other third-party widgets.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
+                
+                <h3>Always responsive</h3>
+                <p>Across every breakpoint, use <code>.table-responsive</code> for horizontally scrolling tables.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
+    
+                <h3>Breakpoint specific</h3>
+                <p>Use <code>.table-responsive{-sm|-md|-lg|-xl}</code> as needed to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/tables/">getbootstrap.com</a></p>
+            </div>
         </section>
         <section class="main-section" id="figures">
             <header><h1>Figures</h1></header>
-            <p>Documentation and examples for displaying related images and text with the figure component in Bootstrap.</p>
-            <p>Anytime you need to display a piece of content—like an image with an optional caption, consider using a <code>&ltfigure&gt</code>.</p>
-            <p>Use the included .figure , .figure-img and .figure-caption classes to provide some baseline styles for the HTML5 <code>&ltfigure&gt</code> and <code>&ltfigcaption&gt</code> elements. Images in figures have no explicit size, so be sure to add the <code>.img-fluid</code> class to your <code>&ltimg&gt</code> to make it responsive.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/figures/">getbootstrap.com</a></p>
-            <p>Aligning the figure’s caption is easy with our text utilities.</p>
-            <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/figures/">getbootstrap.com</a></p>
-
+            <div class="content">
+                <p>Documentation and examples for displaying related images and text with the figure component in Bootstrap.</p>
+                <p>Anytime you need to display a piece of content—like an image with an optional caption, consider using a <code>&ltfigure&gt</code>.</p>
+                <p>Use the included .figure , .figure-img and .figure-caption classes to provide some baseline styles for the HTML5 <code>&ltfigure&gt</code> and <code>&ltfigcaption&gt</code> elements. Images in figures have no explicit size, so be sure to add the <code>.img-fluid</code> class to your <code>&ltimg&gt</code> to make it responsive.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/figures/">getbootstrap.com</a></p>
+                <p>Aligning the figure’s caption is easy with our text utilities.</p>
+                <p>Open examples on <a href="https://getbootstrap.com/docs/4.5/content/figures/">getbootstrap.com</a></p>
+            </div>
         </section> 
     </main>
     
