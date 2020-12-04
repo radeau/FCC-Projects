@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display: flex;
+    height: 20vh;
+}
+
+.logo{
+    flex: 1;
+}
+
+.nav-list{
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Alatsi', Helvetica, sans-serif;
+
+}
+
+nav div a{
+    text-decoration: none;
+    color: #4A4141;
+    font-size: 25px;
+    line-height: 51px;
+ }
+
+nav div a:hover,
+.active{
+    background: #F0EAEA;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+ section{
+     display: flex;
+     height: 40vh;
+ }
+
+ section .text{
+     flex: 1;
+ }
+ 
+ section .photo{
+     flex: 1;
+ }
+
+ .rect-brown{
+     background-color: #F0EAEA;
+     height: 40vh;
+ }
